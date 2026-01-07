@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>河南奋隼建筑工程有限公司 - 专业建筑工程服务</title>
-    <meta name="description" content="河南奋隼建筑工程有限公司专业提供房屋建筑、市政工程、装饰装修等一站式建筑服务">
+    <meta name="description" content="河南奋隼建筑工程有限公司专业提供建筑施工、市政工程、装饰装修等一站式建筑服务">
     <style>
         * {
             margin: 0;
@@ -13,10 +13,10 @@
         }
 
         body {
-            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            font-family: 'Microsoft YaHei', 'SimHei', Arial, sans-serif;
             line-height: 1.6;
             color: #333;
-            background-color: #f8f9fa;
+            background-color: #ffffff;
         }
 
         .container {
@@ -27,7 +27,7 @@
 
         /* 头部导航 */
         header {
-            background: linear-gradient(135deg, #2c3e50, #34495e);
+            background: #1a3a6c;
             color: white;
             padding: 1rem 0;
             position: sticky;
@@ -45,23 +45,30 @@
         .logo {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 15px;
         }
 
         .logo-icon {
-            font-size: 2rem;
-            color: #f39c12;
+            font-size: 2.5rem;
+            color: #e74c3c;
         }
 
         .logo h1 {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .logo h2 {
+            font-size: 0.9rem;
+            font-weight: normal;
+            opacity: 0.8;
         }
 
         nav ul {
             display: flex;
             list-style: none;
-            gap: 2rem;
+            gap: 2.5rem;
         }
 
         nav a {
@@ -70,17 +77,18 @@
             padding: 0.5rem 1rem;
             border-radius: 5px;
             transition: background-color 0.3s;
+            font-weight: 500;
         }
 
         nav a:hover {
-            background-color: #f39c12;
+            background-color: #e74c3c;
         }
 
         /* 轮播图 */
         .hero {
-            height: 500px;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500"><rect fill="%2334495e" width="1200" height="500"/><text fill="%23ffffff" font-family="Arial" font-size="40" x="50%" y="50%" text-anchor="middle">建筑工程展示</text></svg>');
+            height: 600px;
+            background: linear-gradient(rgba(26, 58, 108, 0.8), rgba(26, 58, 108, 0.8)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%231a3a6c" width="1200" height="600"/><text fill="%23ffffff" font-family="Arial" font-size="48" x="50%" y="50%" text-anchor="middle">河南奋隼建筑工程</text><text fill="%23ffffff" font-family="Arial" font-size="24" x="50%" y="55%" text-anchor="middle">专业建筑施工 · 品质工程保障</text></svg>');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -96,196 +104,313 @@
         }
 
         .hero h2 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            letter-spacing: 2px;
         }
 
         .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
+            font-size: 1.4rem;
+            margin-bottom: 2.5rem;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
         }
 
         .btn {
             display: inline-block;
-            background-color: #f39c12;
+            background-color: #e74c3c;
             color: white;
-            padding: 12px 30px;
+            padding: 15px 40px;
             text-decoration: none;
             border-radius: 5px;
             transition: background-color 0.3s;
             border: none;
             cursor: pointer;
-            font-size: 1rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+            letter-spacing: 1px;
         }
 
         .btn:hover {
-            background-color: #e67e22;
+            background-color: #c0392b;
         }
 
         /* 服务介绍 */
         .section {
-            padding: 4rem 0;
+            padding: 5rem 0;
         }
 
         .section-title {
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 4rem;
         }
 
         .section-title h2 {
-            font-size: 2.5rem;
-            color: #2c3e50;
-            margin-bottom: 1rem;
+            font-size: 2.8rem;
+            color: #1a3a6c;
+            margin-bottom: 1.2rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: #e74c3c;
         }
 
         .section-title p {
-            color: #7f8c8d;
-            font-size: 1.1rem;
+            color: #666;
+            font-size: 1.2rem;
         }
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
         }
 
         .service-card {
             background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             text-align: center;
-            transition: transform 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #eee;
         }
 
         .service-card:hover {
             transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(231, 76, 60, 0.15);
         }
 
         .service-icon {
-            font-size: 3rem;
-            color: #f39c12;
-            margin-bottom: 1rem;
+            font-size: 4rem;
+            color: #e74c3c;
+            margin-bottom: 1.5rem;
         }
 
         .service-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #2c3e50;
+            font-size: 1.6rem;
+            margin-bottom: 1.2rem;
+            color: #1a3a6c;
+        }
+
+        .service-card p {
+            color: #666;
+            line-height: 1.8;
         }
 
         /* 项目展示 */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
+            gap: 2.5rem;
         }
 
         .project-card {
             background: white;
-            border-radius: 10px;
+            border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            border: 1px solid #eee;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
         }
 
         .project-image {
-            height: 200px;
-            background: linear-gradient(45deg, #3498db, #2980b9);
+            height: 250px;
+            background: linear-gradient(45deg, #1a3a6c, #2980b9);
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
+            font-weight: bold;
         }
 
         .project-info {
-            padding: 1.5rem;
+            padding: 2rem;
         }
 
         .project-info h3 {
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
-            color: #2c3e50;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #1a3a6c;
+        }
+
+        .project-info p {
+            color: #666;
+            line-height: 1.7;
         }
 
         /* 关于我们 */
         .about-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+            gap: 4rem;
             align-items: center;
         }
 
         .about-text h3 {
-            font-size: 1.8rem;
-            color: #2c3e50;
-            margin-bottom: 1rem;
+            font-size: 2.2rem;
+            color: #1a3a6c;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
         }
 
         .about-stats {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
-            margin-top: 2rem;
+            gap: 1.5rem;
+            margin-top: 2.5rem;
         }
 
         .stat-item {
             text-align: center;
-            padding: 1rem;
+            padding: 1.5rem;
             background: #f8f9fa;
-            border-radius: 5px;
+            border-radius: 8px;
+            border: 1px solid #eee;
         }
 
         .stat-number {
-            font-size: 2rem;
+            font-size: 2.5rem;
             font-weight: bold;
-            color: #f39c12;
+            color: #e74c3c;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        /* 资质证书 */
+        .certificates {
+            background: #f8f9fa;
+            padding: 4rem 0;
+        }
+
+        .certificates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .certificate-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
+        }
+
+        .certificate-icon {
+            font-size: 3rem;
+            color: #e74c3c;
+            margin-bottom: 1rem;
+        }
+
+        .certificate-item h4 {
+            font-size: 1.3rem;
+            color: #1a3a6c;
+            margin-bottom: 0.5rem;
+        }
+
+        .certificate-item p {
+            color: #666;
+            font-size: 0.9rem;
         }
 
         /* 联系我们 */
         .contact-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+            gap: 4rem;
         }
 
         .contact-info {
             display: flex;
             flex-direction: column;
-            gap: 1.5rem;
+            gap: 2rem;
         }
 
         .contact-item {
             display: flex;
             align-items: flex-start;
-            gap: 1rem;
+            gap: 1.2rem;
         }
 
         .contact-icon {
-            font-size: 1.5rem;
-            color: #f39c12;
+            font-size: 1.8rem;
+            color: #e74c3c;
+            min-width: 40px;
+        }
+
+        .contact-item h3 {
+            font-size: 1.2rem;
+            color: #1a3a6c;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item p {
+            color: #666;
+            line-height: 1.6;
         }
 
         /* 页脚 */
         footer {
-            background: #2c3e50;
+            background: #1a3a6c;
             color: white;
-            padding: 3rem 0 1rem;
+            padding: 4rem 0 2rem;
         }
 
         .footer-content {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
+            gap: 3rem;
+            margin-bottom: 3rem;
         }
 
         .footer-section h3 {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+            color: #e74c3c;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: #e74c3c;
+        }
+
+        .footer-section p {
+            color: #bbb;
+            line-height: 1.7;
             margin-bottom: 1rem;
-            color: #f39c12;
         }
 
         .footer-section ul {
@@ -293,12 +418,13 @@
         }
 
         .footer-section ul li {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.8rem;
         }
 
         .footer-section a {
-            color: #bdc3c7;
+            color: #bbb;
             text-decoration: none;
+            transition: color 0.3s;
         }
 
         .footer-section a:hover {
@@ -307,30 +433,38 @@
 
         .footer-bottom {
             text-align: center;
-            padding-top: 2rem;
+            padding-top: 3rem;
             border-top: 1px solid #34495e;
-            color: #bdc3c7;
+            color: #bbb;
+        }
+
+        .footer-bottom p {
+            margin: 0.5rem 0;
         }
 
         /* 响应式设计 */
         @media (max-width: 768px) {
             .header-content {
                 flex-direction: column;
-                gap: 1rem;
+                gap: 1.5rem;
             }
 
             nav ul {
                 flex-direction: column;
-                gap: 0.5rem;
+                gap: 1rem;
                 text-align: center;
             }
 
             .hero {
-                height: 400px;
+                height: 500px;
             }
 
             .hero h2 {
-                font-size: 2rem;
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
             }
 
             .about-content,
@@ -339,7 +473,11 @@
             }
 
             .section {
-                padding: 2rem 0;
+                padding: 3rem 0;
+            }
+
+            .section-title h2 {
+                font-size: 2.2rem;
             }
         }
     </style>
@@ -350,15 +488,18 @@
         <div class="container header-content">
             <div class="logo">
                 <div class="logo-icon">🏗️</div>
-                <h1>河南奋隼建筑</h1>
+                <div>
+                    <h1>河南奋隼建筑工程有限公司</h1>
+                    <h2>HENAN FENSUN CONSTRUCTION ENGINEERING CO., LTD.</h2>
+                </div>
             </div>
             <nav>
                 <ul>
                     <li><a href="#home">首页</a></li>
-                    <li><a href="#services">服务</a></li>
-                    <li><a href="#projects">项目</a></li>
-                    <li><a href="#about">关于</a></li>
-                    <li><a href="#contact">联系</a></li>
+                    <li><a href="#services">服务项目</a></li>
+                    <li><a href="#projects">项目案例</a></li>
+                    <li><a href="#about">关于我们</a></li>
+                    <li><a href="#contact">联系我们</a></li>
                 </ul>
             </nav>
         </div>
@@ -367,8 +508,8 @@
     <!-- 首屏轮播图 -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <h2>河南奋隼建筑工程有限公司</h2>
-            <p>专业建筑服务，品质工程保障，致力于为客户提供最优质的建筑工程解决方案</p>
+            <h2>专业建筑施工 · 品质工程保障</h2>
+            <p>致力于为客户提供最优质的建筑工程解决方案</p>
             <a href="#contact" class="btn">联系我们</a>
         </div>
     </section>
@@ -377,29 +518,61 @@
     <section class="section" id="services">
         <div class="container">
             <div class="section-title">
-                <h2>我们的服务</h2>
-                <p>专业建筑服务，品质工程保障</p>
+                <h2>专业服务</h2>
+                <p>全方位建筑施工解决方案</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">🏠</div>
-                    <h3>房屋建筑</h3>
-                    <p>专业的房屋建筑工程服务，包括住宅、商业建筑等各类建筑项目的设计与施工</p>
+                    <h3>房屋建筑工程</h3>
+                    <p>专业承接各类住宅、商业、办公等房屋建筑工程，严格按照国家标准施工，确保工程质量。</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🏙️</div>
                     <h3>市政工程</h3>
-                    <p>市政基础设施建设，道路、桥梁、管网等公共工程的专业施工服务</p>
+                    <p>道路、桥梁、管网等市政基础设施建设，经验丰富，技术先进，服务优质。</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🎨</div>
                     <h3>装饰装修</h3>
-                    <p>室内外装饰装修工程，提供设计、施工一体化的专业服务</p>
+                    <p>室内外装饰装修工程，提供设计、施工一体化服务，打造舒适美观的居住环境。</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🔧</div>
                     <h3>工程维护</h3>
-                    <p>建筑设施维护保养服务，确保建筑安全和功能完善</p>
+                    <p>建筑设施维护保养服务，专业团队，确保建筑安全和功能完善。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 资质证书 -->
+    <section class="certificates">
+        <div class="container">
+            <div class="section-title">
+                <h2>企业资质</h2>
+                <p>专业资质认证，实力保障</p>
+            </div>
+            <div class="certificates-grid">
+                <div class="certificate-item">
+                    <div class="certificate-icon">📋</div>
+                    <h4>建筑工程施工总承包</h4>
+                    <p>壹级资质</p>
+                </div>
+                <div class="certificate-item">
+                    <div class="certificate-icon">📋</div>
+                    <h4>市政公用工程施工总承包</h4>
+                    <p>贰级资质</p>
+                </div>
+                <div class="certificate-item">
+                    <div class="certificate-icon">📋</div>
+                    <h4>建筑装修装饰工程专业承包</h4>
+                    <p>贰级资质</p>
+                </div>
+                <div class="certificate-item">
+                    <div class="certificate-icon">📋</div>
+                    <h4>ISO质量管理体系认证</h4>
+                    <p>ISO 9001:2015</p>
                 </div>
             </div>
         </div>
@@ -409,29 +582,29 @@
     <section class="section" id="projects">
         <div class="container">
             <div class="section-title">
-                <h2>项目展示</h2>
+                <h2>项目案例</h2>
                 <p>精选项目案例，展示专业实力</p>
             </div>
             <div class="projects-grid">
                 <div class="project-card">
-                    <div class="project-image">住宅小区项目</div>
+                    <div class="project-image">XX住宅小区项目</div>
                     <div class="project-info">
-                        <h3>某住宅小区建设项目</h3>
-                        <p>总建筑面积15万平方米，包含多栋高层住宅楼及配套设施</p>
+                        <h3>XX住宅小区建设项目</h3>
+                        <p>总建筑面积15万平方米，包含多栋高层住宅楼及配套设施，严格按照绿色建筑标准施工，获得业主高度认可。</p>
                     </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-image">商业综合体</div>
+                    <div class="project-image">XX商业综合体</div>
                     <div class="project-info">
-                        <h3>某商业综合体项目</h3>
-                        <p>集购物、娱乐、办公于一体的现代化商业综合体</p>
+                        <h3>XX商业综合体项目</h3>
+                        <p>集购物、娱乐、办公于一体的现代化商业综合体，采用先进的建筑技术，打造地标性建筑。</p>
                     </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-image">市政道路</div>
+                    <div class="project-image">XX市政道路工程</div>
                     <div class="project-info">
-                        <h3>某市政道路工程</h3>
-                        <p>城市主干道改造工程，提升交通承载能力</p>
+                        <h3>XX市政道路工程</h3>
+                        <p>城市主干道改造工程，提升交通承载能力，改善市民出行条件，工程质量优良。</p>
                     </div>
                 </div>
             </div>
@@ -448,29 +621,29 @@
             <div class="about-content">
                 <div class="about-text">
                     <h3>专业建筑团队，品质工程保障</h3>
-                    <p>河南奋隼建筑工程有限公司成立于2020年，是一家专业从事建筑工程施工、市政工程、装饰装修等业务的综合性建筑企业。</p>
-                    <p>公司拥有一支经验丰富的专业团队，秉承"质量第一、客户至上"的服务理念，致力于为客户提供最优质的建筑服务。</p>
+                    <p>河南奋隼建筑工程有限公司成立于2020年，是一家专业从事建筑工程施工、市政工程、装饰装修等业务的综合性建筑企业。公司注册资金5000万元，具备建筑工程施工总承包壹级资质。</p>
+                    <p>公司拥有一支经验丰富的专业团队，秉承"质量第一、安全至上、客户满意"的服务理念，致力于为客户提供最优质的建筑服务。我们始终坚持技术创新，严格质量控制，确保每一个项目都能达到客户满意的标准。</p>
                     <div class="about-stats">
                         <div class="stat-item">
-                            <div class="stat-number">500+</div>
-                            <div>项目经验</div>
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">项目经验</span>
                         </div>
                         <div class="stat-item">
-                            <div class="stat-number">100+</div>
-                            <div>专业团队</div>
+                            <span class="stat-number">100+</span>
+                            <span class="stat-label">专业团队</span>
                         </div>
                         <div class="stat-item">
-                            <div class="stat-number">98%</div>
-                            <div>客户满意度</div>
+                            <span class="stat-number">98%</span>
+                            <span class="stat-label">客户满意度</span>
                         </div>
                         <div class="stat-item">
-                            <div class="stat-number">3</div>
-                            <div>年平均工期</div>
+                            <span class="stat-number">3</span>
+                            <span class="stat-label">年平均工期</span>
                         </div>
                     </div>
                 </div>
                 <div class="about-image">
-                    <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'><rect fill='%2334495e' width='400' height='300'/><text fill='%23ffffff' font-family='Arial' font-size='20' x='50%' y='50%' text-anchor='middle'>公司团队照片</text></svg>" alt="公司团队" style="width: 100%; border-radius: 10px;">
+                    <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'><rect fill='%23f8f9fa' width='400' height='300'/><text fill='%231a3a6c' font-family='Arial' font-size='18' x='50%' y='50%' text-anchor='middle'>公司团队照片</text></svg>" alt="公司团队" style="width: 100%; border-radius: 8px; border: 1px solid #eee;">
                 </div>
             </div>
         </div>
@@ -489,15 +662,17 @@
                         <div class="contact-icon">📍</div>
                         <div>
                             <h3>公司地址</h3>
-                            <p>河南省郑州市金水区XX路XX号</p>
+                            <p>河南省郑州市金水区农业路东段XX号</p>
+                            <p>邮编：450000</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon">📞</div>
                         <div>
                             <h3>联系电话</h3>
-                            <p>0371-XXXXXXXX</p>
-                            <p>138-XXXX-XXXX</p>
+                            <p>固定电话：0371-XXXXXXXX</p>
+                            <p>业务热线：138-XXXX-XXXX</p>
+                            <p>技术支持：139-XXXX-XXXX</p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -505,14 +680,16 @@
                         <div>
                             <h3>电子邮箱</h3>
                             <p>info@fensun-construction.com</p>
+                            <p>business@fensun-construction.com</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon">🕒</div>
                         <div>
                             <h3>工作时间</h3>
-                            <p>周一至周五: 8:00-18:00</p>
+                            <p>周一至周五: 8:30-18:00</p>
                             <p>周六: 9:00-17:00</p>
+                            <p>(节假日除外)</p>
                         </div>
                     </div>
                 </div>
@@ -526,38 +703,44 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>河南奋隼建筑</h3>
-                    <p>专业建筑工程服务，品质工程保障，致力于为客户提供最优质的建筑解决方案。</p>
+                    <p>河南奋隼建筑工程有限公司成立于2020年，是一家专业从事建筑工程施工、市政工程、装饰装修等业务的综合性建筑企业。</p>
+                    <p>公司秉承"质量第一、安全至上、客户满意"的服务理念，致力于为客户提供最优质的建筑服务。</p>
                 </div>
                 <div class="footer-section">
                     <h3>快速链接</h3>
                     <ul>
                         <li><a href="#home">首页</a></li>
                         <li><a href="#services">服务项目</a></li>
-                        <li><a href="#projects">项目展示</a></li>
+                        <li><a href="#projects">项目案例</a></li>
                         <li><a href="#about">关于我们</a></li>
+                        <li><a href="#contact">联系我们</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h3>服务项目</h3>
                     <ul>
-                        <li><a href="#">房屋建筑</a></li>
-                        <li><a href="#">市政工程</a></li>
-                        <li><a href="#">装饰装修</a></li>
-                        <li><a href="#">工程维护</a></li>
+                        <li><a href="#">房屋建筑工程</a></li>
+                        <li><a href="#">市政公用工程</a></li>
+                        <li><a href="#">装饰装修工程</a></li>
+                        <li><a href="#">钢结构工程</a></li>
+                        <li><a href="#">园林绿化工程</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h3>联系方式</h3>
                     <ul>
-                        <li>电话: 0371-XXXXXXXX</li>
-                        <li>手机: 138-XXXX-XXXX</li>
-                        <li>邮箱: info@fensun-construction.com</li>
-                        <li>地址: 河南省郑州市金水区XX路XX号</li>
+                        <li>公司地址：河南省郑州市金水区农业路东段XX号</li>
+                        <li>固定电话：0371-XXXXXXXX</li>
+                        <li>业务热线：138-XXXX-XXXX</li>
+                        <li>电子邮箱：info@fensun-construction.com</li>
+                        <li>邮编：450000</li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 河南奋隼建筑工程有限公司. 保留所有权利. | 豫ICP备XXXXXXXX号</p>
+                <p>&copy; 2026 河南奋隼建筑工程有限公司. 保留所有权利.</p>
+                <p>豫ICP备XXXXXXXX号 | 营业执照：XXXXXXXXXXXXXXX</p>
+                <p>建筑资质证书编号：XXXXXXXXXXXXXXXXX</p>
             </div>
         </div>
     </footer>
