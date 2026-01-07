@@ -73,10 +73,11 @@
         /* 轮播图 */
         .hero {
             height: 500px;
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                        url('https://cdn.jsdelivr.net/gh/Henan-Fensun-Construction/resource/Company%20Wall.jpg');
+            background-image: url('https://cdn.jsdelivr.net/gh/Henan-Fensun-Construction/resource/Company%20Wall.jpg');
             background-size: cover;
             background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -84,9 +85,21 @@
             color: white;
         }
 
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* 半透明黑色遮罩 */
+        }
+
         .hero-content {
+            position: relative;
             max-width: 800px;
             padding: 2rem;
+            z-index: 1;
         }
 
         .hero h2 {
@@ -101,16 +114,16 @@
 
         .btn {
             display: inline-block;
-            background-color: #000000;
+            background-color: rgba(0, 0, 0, 0.8);
             color: white;
             padding: 12px 30px;
             text-decoration: none;
             transition: background-color 0.3s;
-            border: 1px solid #000000;
+            border: 1px solid rgba(255, 255, 255, 0.3);
         }
 
         .btn:hover {
-            background-color: transparent;
+            background-color: rgba(0, 0, 0, 0.6);
         }
 
         /* 服务介绍 */
